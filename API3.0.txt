@@ -1,0 +1,1623 @@
+OpslabJutil3.0.0API,请善用快捷进行搜索
+关注我 
+
+com.opslab.Opslab
+一些常用的常量
+限定符和类型	字段和说明
+static String	BUSINESS_ACCESS
+业务访问
+static String	BUSINESS_DELETE
+业务删除
+static String	BUSINESS_INSERT
+业务插入
+static String	BUSINESS_UPDATE
+业务更新
+static String	BUSINESS_UPLOAD
+业务文件上传
+static String	DATE_FORMAT
+日期类型格式
+static String	DATETIME_FORMAT
+日期时间类型格式
+static String	GB2312
+最常见的中文字符集
+static String	GBK
+中文超大字符集
+static String	HEX_CHAR_STR
+十六进制字符串
+static String	HTTP_PROXY_HOST
+http代理主机标识
+static String	HTTP_PROXY_PASSWORD
+http代理用户密码标识
+static String	HTTP_PROXY_PORT
+http代理主机端口
+static String	HTTP_PROXY_USER
+http代理用户标识
+static String	ISO_8859_1
+ISO 拉丁字母表 No.1，也叫作 ISO-LATIN-1
+static String	JVM_ENCODING
+JVM的编码
+static String	JVM_TEMPDIR
+JVM默认的临时目录
+static String	JVM_VERSION
+JVM的版本
+static String	STR_EMPTY
+空字符串
+static String[]	SYMBOL_FH
+常用的符号
+static String[]	SYMBOL_MATH
+常用的数学符号
+static String[]	SYMBOL_NUMBER
+常用的数学符号
+static String[]	SYMBOL_UNIT
+计量符号
+static char[]	SYMBOL_UNMEANING
+一些常用的无意义的符号(只相对于中文)
+static String	SYS_ERROR
+失败
+static String	SYS_EXCEPTION
+异常
+static String	SYS_FILE_SEPARATOR
+系统文件分隔符key
+static String	SYS_LINE_SEPARATOR
+系统换行符key
+static String	SYS_NOLOGIN
+未登陆
+static String	SYS_NORECORD
+无记录
+static String	SYS_OS_ARCH
+主机架构
+static String	SYS_OS_NAME
+主机类型
+static String	SYS_OS_VERSION
+主机类型版本
+static String	SYS_PATH_SEPARATOR
+系统路径分隔符key
+static String	SYS_SUCCESS
+成功
+static String	SYS_SUN_DESKTOP
+操作系统类型
+static String	TIME_FORMAT
+时间类型的格式
+static String	US_ASCII
+7位ASCII字符，也叫作ISO646-US、Unicode字符集的基本拉丁块
+static String	UTF_16
+16 位 UCS 转换格式，字节顺序由可选的字节顺序标记来标识
+static String	UTF_16BE
+16 位 UCS 转换格式，Big Endian（最低地址存放高位字节）字节顺序
+static String	UTF_16LE
+16 位 UCS 转换格式，Little-endian（最高地址存放低位字节）字节顺序
+static String	UTF_8
+8 位 UCS 转换格式
+com.opslab.annotion.MethodType
+常见业务类型标识
+限定符和类型	方法和说明
+static MethodType	valueOf(String name)
+返回带有指定名称的该类型的枚举常量。
+static MethodType[]	values()
+按照声明该枚举类型的常量的顺序, 返回 包含这些常量的数组。
+com.opslab.bean.BeanStruct
+存放字段属性信息
+限定符和类型	方法和说明
+String	getFieldName() 
+Object	getFieldType() 
+java.lang.reflect.Method	getReadMethod() 
+java.lang.reflect.Method	getWriteMethod() 
+boolean	isDeclared() 
+void	setDeclared(boolean isDeclared) 
+void	setFieldName(String fieldName) 
+void	setFieldType(Object fieldType) 
+void	setReadMethod(java.lang.reflect.Method readMethod) 
+void	setWriteMethod(java.lang.reflect.Method writeMethod) 
+com.opslab.bean.PageDomain
+分页数据
+限定符和类型	方法和说明
+String	getOrderBy() 
+com.opslab.bean.QueryPage
+分页查询
+限定符和类型	方法和说明
+String	getOrderBy() 
+com.opslab.bean.ResultBean
+通用的结果集封装
+限定符和类型	方法和说明
+String	getCode() 
+Object	getData() 
+boolean	isSuccess() 
+void	setCode(String code) 
+void	setData(Object data) 
+void	setSuccess(boolean success) 
+com.opslab.bean.UiResult
+通用的Ajax请求结果
+限定符和类型	方法和说明
+boolean	isSuccess() 
+com.opslab.factory.UiResultFactory
+限定符和类型	字段和说明
+static int	SYS_ERROR 
+static int	SYS_EXCEPTION 
+static int	SYS_NOLOGIN 
+static int	SYS_NORECORD 
+static int	SYS_SUCCESS 
+static String	SYSMSG_ERROR 
+static String	SYSMSG_EXCEPTION 
+static String	SYSMSG_NOLOGIN 
+static String	SYSMSG_NORECORD 
+static String	SYSMSG_SUCCESS 
+限定符和类型	方法和说明
+static UiResult	error()
+请求错误
+static UiResult	error(String errorMsg) 
+static UiResult	error(String errorMsg,Object data) 
+static UiResult	exception()
+请求异常
+static UiResult	exception(String errorMsg) 
+static UiResult	noLogin()
+未登录
+static UiResult	noRecord()
+未找到记录
+static UiResult	result(int code, String msg, Object data) 
+static UiResult	success()
+请求成功
+static UiResult	success(Object data) 
+com.opslab.functions.ObjectFilter
+对象过滤接口
+限定符和类型	方法和说明
+boolean	filter(T t)
+实现自定义过滤方法
+com.opslab.functions.ObjectHandler
+定义一些处理接口，便于优雅的处理一些数据,实现的方法不返回数据
+限定符和类型	方法和说明
+void	handler(T t)
+实现自定义处理方法
+com.opslab.functions.ObjectProcess
+定义一些处理接口，便于优雅的处理一些数据,实现的方法返回数据
+限定符和类型	方法和说明
+E	process(T t)
+实现自定义处理方法
+com.opslab.functions.PropertyFilter
+属性过滤接口
+限定符和类型	方法和说明
+String	Properties(String pro) 
+com.opslab.helper.BeanHepler
+JavaBean相关的一些操作
+限定符和类型	方法和说明
+static void	add(java.lang.Class clazz)
+添加Bean到BeanFactory的解析范围中
+static void	add(Object obj)
+添加Bean到BeanFactory的解析范围中
+static void	copyProperties(Object srcBean, Object destBean)
+复制同名属性
+static void	copyProperties(Object srcBean, Object destBean, PropertyFilter filter)
+使用自定义的属性过滤函数
+static void	copyPropertiesIgnoreCase(Object srcBean, Object destBean)
+复制同名属性(忽略大小写)
+static void	copyPropertiesIgnoreCasePeaceful(Object srcBean, Object destBean)
+复制同名属性(忽略大小写)
+static void	copyPropertiesPeaceful(Object srcBean, Object destBean)
+复制同名属性
+static void	copyPropertiesPeaceful(Object srcBean, Object destBean, PropertyFilter filter)
+使用自定义的属性过滤函数
+static void	copyProperty(Object srcBean, Object destBean, String[] pros)
+拷贝对象指定的属性
+static void	copyPropertyPeaceful(Object srcBean, Object destBean, String[] pros)
+拷贝对象指定的属性
+static Object	getProperty(Object bean,String pro)
+获取对象的属性
+static Object	getPropertyFilter(Object bean,String pro,PropertyFilter filter)
+使用自定义的过滤器获取对象的属性获取对象的属性
+static Object	getPropertyFilterPeaceful(Object bean,String pro,PropertyFilter filter)
+使用自定义的过滤器获取对象的属性
+static Object	getPropertyIgnoreCase(Object bean,String pro)
+获取对象的属性(忽略属性名字大小写)
+static Object	getPropertyIgnoreCasePeaceful(Object bean,String pro)
+获取对象的属性(忽略属性名字大小写)
+static Object	getPropertyPeaceful(Object bean,String pro)
+获取对象的属性
+static boolean	hasDeclaredProperty(Object bean,String pro)
+判断自己定义的而非继承的属性pro是否存在
+static boolean	hasProperty(Object bean,String pro)
+判断属性是否存在
+static boolean	hasPropertyFilter(Object bean,String pro,PropertyFilter filter)
+使用自定义的过滤器
+static boolean	hasPropertyIgnoreCase(Object bean,String pro)
+判断属性是否存在忽略大小写
+static void	setProperty(Object bean,String pro,Object value)
+设置对象的属性
+static void	setPropertyFilter(Object bean,String pro,Object value,PropertyFilter filter)
+使用自定义的filter进行属性设值
+static void	setPropertyFilterPeaceful(Object bean,String pro,Object value,PropertyFilter filter)
+使用自定义的filter进行属性设值
+static void	setPropertyIgnoreCase(Object bean,String pro,Object value)
+设置对象的属性忽略大小写
+static void	setPropertyIgnoreCasePeaceful(Object bean,String pro,Object value)
+设置对象的属性忽略大小写
+static void	setPropertyPeaceful(Object bean,String pro,Object value)
+设置对象的属性
+com.opslab.helper.ChineseHelper
+一些中文的操作
+限定符和类型	方法和说明
+static int	ChineseLength(String str)
+获取一个字符串中中文字符的个数
+static String	getFirstSpell(String chinese)
+获取汉字串拼音首字母，英文字符不变
+static String	getFullSpell(String chinese)
+获取汉字串拼音，英文字符不变
+static String	getPingYin(String inputString)
+将字符串中的中文转化为拼音,其他字符不变
+static boolean	isChinese(char c)
+判断是否是中文
+static boolean	isChinese(String strName) 
+static boolean	isChineseByName(String str) 
+static boolean	isChineseByREG(String str) 
+static float	isMessyCode(String strName)
+判断是否是乱码
+static String	transIDCard15to18(String IdCardNO) 
+com.opslab.helper.ClassHelper
+Description:Java Class与反射相关的一些工具类
+限定符和类型	字段和说明
+static java.lang.ClassLoader	overridenClassLoader
+获取类加载器
+限定符和类型	方法和说明
+static List<String>	getClassNameByFile(String filePath, boolean childPackage)
+从项目文件获取某包下所有类
+static List<String>	getClassNameByJar(String jarPath)
+从jar获取某包下所有类
+static java.lang.ClassLoader	getContextClassLoader() 
+static String[]	getField(String className, boolean extendsField)
+获取指定类的全部属性字段
+static File	getFile(String resourceLocation)
+获取资源文件
+static File	getFile(java.net.URL resourceUrl) 
+static File	getFile(java.net.URL resourceUrl,String description) 
+static String[]	getInterfaces(String className,boolean extendsInterfaces)
+获取一类实现的全部接口
+static List<java.lang.Class>	getLoaderClass(java.lang.ClassLoader classLoader)
+获取类加载器已经加载的类
+static String[]	getMethod(String className,boolean extendsMethod)
+获取对象的全部方法
+static String[]	getPrivateField(String className)
+获取类中定义的private类型的属性字段
+static String[]	getPrivateMethod(String className)
+获取对象的全部private类型方法
+static String[]	getProtectedField(String className)
+获取类中定义的protected类型的属性字段
+static String[]	getProtectedMethod(String className, boolean extendsMethod)
+获取对象的全部protected类型方法
+static String[]	getPublicField(String className, boolean extendsField)
+获取类中的公共属性
+static String[]	getPublicMethod(String className,boolean extendsMethod)
+获取对象的全部public类型方法
+static List<String>	getResourceNameByJar(String jarPath)
+获取jar包中的非*.class外的全部资源文件名字
+static List<String>	getResourceNameByJar(String jarPath, String suffix)
+获取jar包中的非*.class外的全部的以suffix结尾的资源文件
+static String	getSuperClass(String className)
+获取一个类的父类
+static String[]	getSuperClassChian(String className)
+获取一个雷的继承链
+static java.lang.Class	loadClass(String className)
+加载指定的类
+static void	setter(Object obj, String att, Object value, java.lang.Class<?> type)
+调用对象的setter方法
+static java.net.URI	toURI(String location) 
+static java.net.URI	toURI(java.net.URL url) 
+com.opslab.helper.CollectionHelper
+集合对象的一些助手工具类
+限定符和类型	方法和说明
+static <T> void	handler(java.util.Collection<T> collection,ObjectHandler<T> handler)
+对集合中元素进行特定的处理
+static <T> List<T>	intersection(List<T> list1, List<T> list2)
+求俩个集合的交集
+static <K,V> Map<K,V>	intersection(Map<K,V> map1, Map<K,V> map2)
+Map集合的交集只提供键的交集
+static <T> java.util.Queue<T>	intersection(java.util.Queue<T> queue1, java.util.Queue<T> queue2)
+求队列的交集
+static <T> java.util.Set<T>	intersection(java.util.Set<T> set1, java.util.Set<T> set2)
+求俩个集合的交集
+static <T> String	join(java.util.Collection<T> collection, String separator)
+将List以separator链接并以字符串的形式返回
+static <K,V> String	join(Map<K,V> map, String separator, String separator1)
+将Map以separator链接并以字符串的形式返回
+static <K,V> String	keyJoin(Map<K,V> map,String separator)
+将map的key以separator链接并以字符串的形式返回
+static <T,E> void	process(java.util.Collection<T> collection,java.util.Collection<E> result,ObjectProcess<T,E> process)
+对集合中的元素进行特定的处理，并获得处理后的结果
+static <T> List<T>	removeDuplicate(List<T> list)
+去除重复元素
+static <T> List<T>	subtract(List<T> list1, List<T> list2)
+求俩个集合的差集
+static <K,V> Map<K,V>	subtract(Map<K,V> map1, Map<K,V> map2)
+求俩个集合的差集
+static <T> java.util.Queue<T>	subtract(java.util.Queue<T> queue1, java.util.Queue<T> queue2)
+求俩个集合的差集
+static <T> java.util.Set<T>	subtract(java.util.Set<T> set1, java.util.Set<T> set2)
+求俩个集合的差集
+static <T> List<T>	unicon(List<T> list1, List<T> list2)
+求俩个集合的并集
+static <K,V> Map<K,V>	unicon(Map<K,V> map1, Map<K,V> map2)
+求俩个map的交集
+static <T> java.util.Queue<T>	unicon(java.util.Queue<T> queue1, java.util.Queue<T> queue2)
+求俩个集合的交集
+static <T> java.util.Set<T>	unicon(java.util.Set<T> set1, java.util.Set<T> set2)
+求俩个集合的交集
+static <K,V> String	valueJoin(Map<K,V> map,String separator)
+将map的value以separator链接并以字符串的形式返回
+com.opslab.helper.ConvertHepler
+常用类型转换
+限定符和类型	方法和说明
+static <T> List<T>	arrayToList(T[] array)
+将数组转换为list
+static char[]	bytesToChars(byte[] bytes)
+bytes数组转char数组bytes to chars
+static String	bytesToHexString(byte[] bytes)
+将二进制转换为十六进制字符输出
+static int	bytesToInt(byte[] bytes)
+字节数组和整型的转换
+static String	byteToBinary(byte src)
+将byte转换为对应的二进制字符串
+static long	byteToLong(byte[] b)
+字节数组和长整型的转换
+static short	byteToShort(byte[] b)
+字节的转换与短整型
+static byte[]	encodeBytes(byte[] source,char split) 
+static String	hexStringToBin(String hexStr)
+将十六进制字符串转为二进制字符串
+static byte[]	hexStringToByte(String hexString)
+把16进制字符串转换成字节数组
+static byte[]	intToByte(int i)
+整型与字节数组的转换
+static byte[]	intToByte(int[] arr)
+整型数组转换为字节数组的转换
+static byte[]	longToByte(long number)
+字节数组和长整型的转换
+static byte[]	shortToByte(short number)
+短整型与字节的转换
+static Integer[]	toIntArray(String str, String split)
+转换为Integer数组
+static Integer	toInteger(Object obj,Integer defaultValue)
+对象转换为整数(转换parseInt(String.valueOf(obj)))
+static java.lang.Long	toInteger(Object obj,java.lang.Long defaultValue)
+对象转换为长整数(转换parseLong(String.valueOf(obj)))
+static List<Integer>	toIntList(String str,String split)
+转换为Integer列表
+static java.lang.Long[]	toLongArray(String split,String str)
+转换为Long数组
+static List<java.lang.Long>	toLongList(String str, String split)
+將字字符串分割成Long類型的列表
+com.opslab.helper.CookieHelper
+CookieHelper :针对Http Cookie的工具类
+限定符和类型	方法和说明
+static javax.servlet.http.Cookie	addCookie(javax.servlet.http.HttpServletResponse response,String name,String value,String path,int maxAge)
+设置 Cookie, 过期时间自定义
+static javax.servlet.http.Cookie	addCookie(javax.servlet.http.HttpServletResponse response,String name,String value,String domain,String path,int maxAge)
+设置 Cookie, 过期时间自定义
+static java.util.ArrayList<javax.servlet.http.Cookie>	addCookies(javax.servlet.http.HttpServletResponse response, Map<String,String> values, String path, int maxAge)
+设置 Cookies, 过期时间自定义
+static String	getCookie(javax.servlet.http.HttpServletRequest request,javax.servlet.http.HttpServletResponse response,String name)
+获得指定Cookie的值，并删除。
+static String	getCookie(javax.servlet.http.HttpServletRequest request,javax.servlet.http.HttpServletResponse response,String name,boolean isRemoved)
+获得指定Cookie的值
+static String	getCookie(javax.servlet.http.HttpServletRequest request,String name)
+获得指定Cookie的值
+static String	headerOrcookieKey(javax.servlet.http.HttpServletRequest request,String key)
+从http头和cookie中获取值
+static javax.servlet.http.Cookie	setCookie(javax.servlet.http.HttpServletResponse response,String name,String value,String path)
+设置 Cookie, 过期时间为30分钟
+com.opslab.helper.CryptoHelper
+提供常见的加密方法
+限定符和类型	方法和说明
+static String	aesEncrypt(String secretKey, String str)
+提供ASE加密算法
+static String	aseDecode(String secretKey,String str)
+提供ASE解密算法
+static byte[]	decryptBASE64(String key)
+BASE64解密
+static String	desEncrypt(String secretKey, String str)
+提供des加密算法
+static String	dseDecode(String secretKey,String str)
+提供des解密算法
+static String	encryptBASE64(byte[] key)
+BASE64加密
+static String	md5(String password)
+字符串加密函数MD5实现
+com.opslab.helper.DateHelper
+提供一些常用的时间想法的方法
+限定符和类型	方法和说明
+static boolean	between(Date startTime,Date endTime,Date date)
+判断在某个时间内
+static boolean	between(String startTime,String endTime,Date date)
+判断是否在某个时间段内
+static Date	calculate(Date date,int second,String timeBurst)
+时间Date在时间段(例如每天的08:00-18:00)上增加或减去second秒
+static Date	calculate(String date,int second,String timeBurst)
+时间Date在时间段(例如每天的08:00-18:00)上增加或减去second秒
+static String	currentDate()
+获取当前的日期
+static String	currentDateTime()
+获取当前日期时间
+static String	currentTime()
+获取当前的时间
+static String	date(Date date)
+将指定的时间格式化成出返回
+static Date	date(String dateStr)
+将指定的字符串解析为时间类型
+static String	dateTime(Date date)
+将指定的时间格式化成出返回
+static Date	dateTime(String datestr)
+将指定的字符串解析为时间类型
+static Date	day(Date date,int day)
+在指定的时间上加或减去几天
+static Date	day(int day)
+在当前时间的基础上加或减去几天
+static Date	hour(Date date, float hour)
+在制定的时间上加或减去几小时-支持浮点数
+static Date	hour(float hour)
+在当前时间的基础上加或减去几小时-支持浮点数
+static boolean	isDate(String date)
+判断字符串是否为日期字符串
+static Date	minute(Date date, int minute)
+在制定的时间上加或减去几分钟
+static Date	minute(int minute)
+在当前时间的基础上加或减去几分钟
+static Date	month(Date date,int month)
+在指定的时间上加或减去几月
+static Date	month(int month)
+在当前时间的基础上加或减去几月
+static int	subDay(Date startTime, Date endTime)
+获取俩个时间之前的相隔的天数
+static int	subDay(String startTime, String endTime)
+获取俩个时间之前的相隔的天数
+static long	subtimeBurst(Date startDate, Date endDate, String timeBurst)
+返回俩个时间在时间段(例如每天的08:00-18:00)的时长-单位秒
+static long	subtimeBurst(String startDate, String endDate, String timeBurst)
+返回俩个时间在时间段(例如每天的08:00-18:00)的时长-单位秒
+static long	subtract(Date date1, Date date2)
+时间date1和date2的时间差-单位秒
+static long	subtract(String date1, String date2)
+时间date1和date2的时间差-单位秒
+static String	subtractDate(String date1, String date2)
+获取俩个时间的查结果用时秒表示
+static int	subtractDay(Date date1,Date date2)
+时间date1和date2的时间差-单位天
+static int	subtractDay(String date1,String date2)
+时间date1和date2的时间差-单位天
+static int	subtractHour(Date date1, Date date2)
+时间date1和date2的时间差-单位小时
+static int	subtractHour(String date1, String date2)
+时间date1和date2的时间差-单位小时
+static int	subtractMinute(Date date1, Date date2)
+时间date1和date2的时间差-单位分钟
+static int	subtractMinute(String date1, String date2)
+时间date1和date2的时间差 -单位分钟
+static int	subtractMonth(Date date1,Date date2)
+时间date1和date2的时间差-单位月
+static int	subtractMonth(String date1,String date2)
+时间date1和date2的时间差-单位月
+static String	subtractTime(String date1, String date2)
+获取俩个时间的查结果用时秒表示
+static int	subtractYear(Date date1, Date date2)
+时间date1和date2的时间差-单位年
+static int	subtractYear(String date1, String date2)
+时间date1和date2的时间差-单位年
+static String	time(Date date)
+讲指定的时间格式化成出返回
+static Date	time(String dateStr)
+将指定的字符串解析为时间类型
+static Date	year(Date date, int year)
+在指定的时间上加或减去几年
+static Date	year(int year)
+在当前时间的基础上加或减去year年
+com.opslab.helper.FileHelper
+一些操作文件的便捷方法
+限定符和类型	方法和说明
+static boolean	addWrite(File file, String str)
+写文件
+static boolean	addWrite(File file, String str, String encoding)
+写文件
+static boolean	cleanFile(File file)
+快速清空一个超大的文件
+static String	contentType(String file)
+获取文件content-type
+static boolean	copy(File resource, File target)
+复制文件
+static boolean	copyFile(File file, File targetFile)
+复制文件通过该方式复制文件文件越大速度越是明显
+static boolean	createFile(String path)
+创建文件支持多级目录
+static boolean	createFiles(File file)
+创建文件支持多级目录
+static boolean	createFiles(File file,boolean isReNew)
+创建文件支持多级目录
+static boolean	delete(File file)
+删除一个目录
+static String	fileHash(File file, String HashTyle)
+获取文件的hash
+static String	getSource(String URL)
+获取文件内容，内容经过BASE64编码
+static List<String>	getSource(String URL,int size)
+将文件转换为base64的字符串
+static void	handlerWithLine(File file,String encoding,ObjectHandler<String> handler)
+逐行处理
+static int	lineCounts(File file)
+获取文件的行数
+static List<File>	listFile(File path)
+罗列指定路径下的全部文件
+static List<File>	listFileFilter(File path, ObjectFilter filter)
+罗列指定路径下的全部文件包括文件夹
+static List<File>	listFileName(File dirPath, String fileName)
+在指定的目录下按照文件名查找文件
+static List<File>	listFileNameIgnoreCase(File dirPath, String fileName)
+在指定的目录下按照文件名查找文件忽略文件带下
+static List<File>	listFileNameReg(File dirPath,java.util.regex.Pattern pattern)
+罗列指定目录下的文件名符合正则表达式的文件
+static List<File>	listFileSuffix(File dirPath, String postfixs)
+获取指定目录下的特点文件,通过后缀名过滤
+static List<File>	listFileWithHandler(File path,ObjectProcess<File,File> handler)
+处理并检索文件
+static <E> void	processWithLine(File file,String encoding,java.util.Collection<E> result,ObjectProcess<String,E> process)
+逐行处理
+static String	readContents(File file)
+读取文件内容
+static List<String>	readLines(File file)
+以列表的方式获取文件的所有行
+static List<String>	readLines(File file,String encoding)
+以列表的方式获取文件的所有行
+static String	simpleEncoding(File file)
+利用字节特征探测文件编码
+static boolean	sourceFile(String filename, List<String> contents)
+将BASE64的字符串恢复成文件
+static boolean	sourceFile(String filename, String content)
+将BASE64的字符串恢复成文件
+static String	suffix(File file)
+获取文件后缀名
+static boolean	write(File file,String str)
+写文件
+static boolean	write(File file,String str,String encoding)
+写文件
+static boolean	zipDeCompress(File file,String zipFile)
+文件压缩支持文件和文件夹
+static boolean	zipUnCompress(File zipFile,String path)
+文件压缩
+com.opslab.helper.HttpHelper
+封装常见的HTTP方法
+限定符和类型	方法和说明
+static String	sendGet(String httpurl)
+发起http的get请求
+static String	sendGetSSL(String httpurl, boolean isIgnoreSSL)
+发起http的get请求支持忽略SSL校验
+static String	sendPost(String httpUrl, String param)
+发起POST请求
+static String	sendPostSSL(String httpUrl,String param,boolean isIgnoreSSL)
+发起POST请求 支持忽略SSL校验
+com.opslab.helper.ImageHelper
+提供图片操作的常用方法
+限定符和类型	方法和说明
+static ResultBean	gifCaptch(int strlen,int width,int height,String file)
+生成一张gif的验证码
+static ResultBean	gifCaptchBase64(int strlen,int width,int height)
+生成一张gif的验证码
+static boolean	isImage(String filePath)
+判断呢是否是图片
+static ResultBean	pngCaptcha(int strlen, int width, int height, String file)
+生产一张png格式的验证图片在指定的位置
+static ResultBean	pngCaptchaBase64(int strlen, int width, int height)
+生成一张png格式的验证码图片以base64编码返回
+com.opslab.helper.RandomHelper
+随机相关的方法封装
+限定符和类型	字段和说明
+static String	ALLCHAR 
+static String	LETTERCHAR 
+static String	NUMBERCHAR 
+限定符和类型	方法和说明
+static int	getNotSimple(int[] param, int len)
+每次生成的len位数都不相同
+static int	integer(int scopeMin,int scoeMax)
+生成制定范围内的随机数
+static String	lowerString(int length)
+返回一个定长的随机纯大写字母字符串(只包含大小写字母)
+static String	mixString(int length)
+返回一个定长的随机纯字母字符串(只包含大小写字母)
+static String	number(int length)
+返回固定长度的数字
+static <T> T	randomItem(T[] param)
+从指定的数组中随机数组中的某个元素
+static <T> T	randomItem(T[] param, double[] percentum)
+从指定的数组中按照指定比例返回指定的随机元素
+static String	squid(String hostFeature)
+返回一个有序列的uuid编码前11位为时间(毫秒)中间4位为主机特征码剩下的保证其唯一性
+static String	string(int length)
+返回一个定长的随机字符串(只包含大小写字母、数字)
+static String	toFixdLengthString(int num, int fixdlenth)
+根据数字生成一个定长的字符串，长度不够前面补0
+static String	toFixdLengthString(long num, int fixdlenth)
+根据数字生成一个定长的字符串，长度不够前面补0
+static String	upperString(int length)
+返回一个定长的随机纯小写字母字符串(只包含大小写字母)
+static String	uuid()
+返回一个UUID
+static String	UUID()
+返回一个UUID
+static String	uuid16() 
+static String	zeroString(int length)
+生成一个定长的纯0字符串
+com.opslab.helper.RegHepler
+Description: 封装一些正则相关的操作
+限定符和类型	字段和说明
+static String	REG_ALNUM
+Alphanumeric characters
+static String	REG_ALPHA
+Alphabetic characters
+static String	REG_ASCII
+ASCII characters
+static String	REG_BLANK
+Space and tab
+static String	REG_CNTRL
+Control characters
+static String	REG_DIGITS
+Digits
+static String	REG_EMAIL
+Email
+static String	REG_FIXED_TELEPHONE
+国内固定电话
+static String	REG_GRAPH
+SVisible characters (i.e. anything except spaces, control characters, etc.)
+static String	REG_HTML
+HTML
+static String	REG_IDENTIFICATION_CARD
+身份证编码
+static String	REG_IP
+i地址
+static String	REG_LEGAL_ACCOUNT
+合法的名字（字母开头，允许5-16字节，允许字母数字下划线）
+static String	REG_LOWER
+Lowercase letters
+static String	REG_MOBILE_TELEPHONE
+移动电话
+static String	REG_POSTALCODE
+邮政编码
+static String	REG_PRINT
+Visible characters and spaces (i.e. anything except control characters, etc.)
+static String	REG_PUNCT
+Punctuation and symbols.
+static String	REG_SPACE
+All whitespace characters, including line breaks
+static String	REG_SPACE_LINE
+空白行
+static String	REG_SPACE_POINT
+首尾空白字符
+static String	REG_UPPER
+Uppercase letters
+static String	REG_URL
+URL地址
+static String	REG_XDIGIT
+Hexadecimal digits
+限定符和类型	方法和说明
+static int	countSubStrReg(String str, String reg)
+获取符合reg正则表达式的字符串在String中出现的次数
+static boolean	isABC(String src)
+判断是否纯字母组合
+static boolean	isEmail(String email)
+判断是否是符合邮箱
+static boolean	isFloatNumeric(String src)
+判断是否浮点数字表示
+static boolean	isMatche(String str, String reg)
+判断字符串str是否符合正则表达式reg
+static boolean	isNumeric(String src)
+判断是否数字表示
+com.opslab.helper.RequestHelper
+封装常见的Request方法
+限定符和类型	方法和说明
+static ClientInfo	clientInfo(javax.servlet.http.HttpServletRequest request)
+获取客户端请求信息
+static Map<String,Object>	convertDataMap(javax.servlet.http.HttpServletRequest request)
+获取请求参数
+static String	getIpAddr(javax.servlet.http.HttpServletRequest request)
+获取客户端请求的IP
+static Map<String,Object>	getParams(javax.servlet.http.HttpServletRequest request)
+获取请求参数
+static boolean	isAjax(javax.servlet.http.HttpServletRequest request)
+判断是否为ajax请求
+static Integer	paramInteger(javax.servlet.http.HttpServletRequest request, String paramName)
+获取整型参数
+static Map<String,Object>	paramMaps(javax.servlet.http.HttpServletRequest request)
+获取请求参数
+static String	requestParamsToString(javax.servlet.ServletRequest request)
+将所有的请求参数转换字符串例如: uri?
+com.opslab.helper.StringHelper
+字符串常用操作方法
+限定符和类型	方法和说明
+static String	formatDouble(double f, String format)
+格式化一个float
+static String	formatNumber(java.math.BigDecimal obj, String format)
+数字格式化
+static String	full2Half(String str)
+全角字符变半角字符
+static String	Half2Full(String str)
+半角字符变全角字符
+static boolean	hasLength(String str)
+判断字符串是否有长度
+static String	hasPrefix(String str1,String str2)
+返回俩个字符串共同的前缀
+static String	hasSuffix(String str1,String str2)
+返回俩个字符串共同的后缀
+static boolean	isEmpty(String str)
+判断是否是空字符串 null和""都返回 true
+static boolean	isNotEmpty(String str)
+判断字符串不为空
+static String	join(String[] array, String symbol)
+把string array or list用给定的符号symbol连接成一个字符串
+static String	left(String input, int count)
+截取字符串左侧指定长度的字符串
+static List<String>	parseString2List(String src, String pattern)
+根据指定的字符把源字符串分割成一个list
+static String	replace(String inString,String oldPattern,String newPattern)
+字符串替换
+static String	replaceBlank(String str)
+页面中去除字符串中的空格、回车、换行符、制表符
+static String	right(String input,int count)
+截取字符串右侧指定长度的字符串
+static String	string2Unicode(String string)
+字符串转换unicode.实现native2ascii.exe类似的功能
+static String	toUnderScoreCase(String s)
+下划线转驼峰命名
+static String	unicode2String(String unicode)
+转字符串 实现native2ascii.exe类似的功能
+com.opslab.helper.SysHepler
+提供些获取系统信息相关的工具方法
+限定符和类型	字段和说明
+static String	FILE_SEPARATOR 
+static String	HOST_IP
+主机IP
+static String	HOST_NAME
+主机名
+static String	JVM_ENCODING
+JVM的编码
+static String	JVM_TEMPDIR
+JVM默认的临时目录
+static String	JVM_VERSION
+JVM的版本
+static String	LINE_SEPARATOR 
+static String	OS_ARCH
+主机架构
+static String	OS_NAME
+主机类型
+static String	OS_VERSION
+主机类型版本
+static String	PATH_SEPARATOR 
+static String	SUN_DESKTOP
+操作系统类型
+static long	TotalMemorySize
+总的物理内存
+限定符和类型	方法和说明
+static String	commandPath(String file)
+返回一个通用的文件路径
+static long	JVMfreeMem()
+虚拟机空闲内存量
+static long	JVMmaxMem()
+虚拟机使用最大内存量
+static long	JVMtotalMem()
+获取JVM内存总量
+static boolean	legalFile(String path)
+判断是否符是合法的文件路径
+static void	setHttpProxy(String host, String port)
+Sets HTTP proxy settings.
+static void	setHttpProxy(String host, String port, String username, String password)
+Sets HTTP proxy settings.
+static long	usedMemory()
+已使用的物理内存
+com.opslab.helper.UrlHelper.Builder
+限定符和类型	方法和说明
+UrlHelper.Builder	queryParam(String name, String value)
+Appends new query parameter to the url.
+String	toString()
+Returns full URL.
+com.opslab.helper.UrlHelper
+URL相关的工具类以下工具类来自开源项目joddHere is an example of full URL: https://jodd:ddoj@www.jodd.org:8080/file;p=1?q=2#third.It consist of:scheme (https) user (jodd) password (ddoj) host (www.jodd.org) port (8080) path (file) path parameter (p=1) query parameter (q=2) fragment (third)
+限定符和类型	方法和说明
+static UrlHelper.Builder	build(String path)
+Creates URL builder for user-friendly way of building URLs.
+static UrlHelper.Builder	build(String path,boolean encodePath)
+Creates URL builder with given path that can be optionally encoded.
+static String	decode(String url)
+Decodes URL elements.
+static String	decode(String source, String encoding)
+Decodes URL elements.
+static String	decodeQuery(String source)
+Decodes query name or value.
+static String	decodeQuery(String source,String encoding)
+Decodes query name or value.
+static String	encode(String uri) 
+static String	encode(String uri, String encoding)
+Encodes the given source URI into an encoded String.
+static String	encodeFragment(String fragment) 
+static String	encodeFragment(String fragment, String encoding)
+Encodes the given URI fragment with the given encoding.
+static String	encodeHost(String host) 
+static String	encodeHost(String host, String encoding)
+Encodes the given URI host with the given encoding.
+static String	encodeHttpUrl(String httpUrl) 
+static String	encodeHttpUrl(String httpUrl,String encoding)
+Encodes the given HTTP URI into an encoded String.
+static String	encodePath(String path) 
+static String	encodePath(String path, String encoding)
+Encodes the given URI path with the given encoding.
+static String	encodePathSegment(String segment) 
+static String	encodePathSegment(String segment,String encoding)
+Encodes the given URI path segment with the given encoding.
+static String	encodePort(String port) 
+static String	encodePort(String port, String encoding)
+Encodes the given URI port with the given encoding.
+static String	encodeQuery(String query) 
+static String	encodeQuery(String query,String encoding)
+Encodes the given URI query with the given encoding.
+static String	encodeQueryParam(String queryParam) 
+static String	encodeQueryParam(String queryParam, String encoding)
+Encodes the given URI query parameter with the given encoding.
+static String	encodeScheme(String scheme) 
+static String	encodeScheme(String scheme, String encoding)
+Encodes the given URI scheme with the given encoding.
+static String	encodeUserInfo(String userInfo) 
+static String	encodeUserInfo(String userInfo, String encoding)
+Encodes the given URI user info with the given encoding.
+static String	getParamValue(String url,String paramName) 
+static Map<String,String>	httpParseQuery(String queryUri)
+解析http请求URI
+static Map<String,String>	parseQuery(String query, char split1, char split2, String dupLink)
+解析字符串返回map键值对(例：a=1&b=2 => a=1,b=2)
+static Map	print(javax.servlet.http.HttpServletRequest request)
+获取HTTPrequest的请求参数
+static String	removeParam(String url,String... paramNames) 
+static String	removeParam(String url,String paramName) 
+static String	setParam(String url, String paramName, String paramValue) 
+static String	urlJoin(java.net.URL url,String locationHeader)
+拼接url方法Example: url:http://tt.se/ Location:/start=>http://tt.se/starturl:http://localhost/moved_perm Location:/ =>http://localhost/url:http://github.com/Location:http://github.com/=>https://github.com/ (If the new url throws a MalformedURLException the url String representation will be returned.)
+com.opslab.helper.WebHelper
+web相关的一些操作方法
+限定符和类型	方法和说明
+static String	escape(String str, String encoding)
+对字符串进行编码
+static String	filter(String value)
+过滤特殊字符
+static String	html(String content)
+html转实体
+static String	replaceXSS(String value)
+去除待带script、src的语句，转义替换后的value值
+static String	unescape(String str, String encoding)
+对字符串进行解码
+static String	unhtml(String content)
+HTML标签转义方法空格 <小于号 <>大于号 >&和号 &"引号"'撇号'￠分¢£镑£¥日圆¥€欧元€§小节§©版权©®注册商标®™商标™×乘号×÷除号÷
+com.opslab.useful.XssHttpServletRequestWrapper
+实现简单的xss过滤
+限定符和类型	方法和说明
+String	getHeader(String name) 
+String	getParameter(String name) 
+String[]	getParameterValues(String name) 
+com.opslab.useful.XssStringJsonSerializer
+Jackson反序列化防XSS
+限定符和类型	方法和说明
+java.lang.Class<String>	handledType() 
+void	serialize(String value,com.fasterxml.jackson.core.JsonGenerator jsonGenerator,com.fasterxml.jackson.databind.SerializerProvider serializerProvider) 
+com.opslab.util.ArrayUtil
+数组相关的工具类
+限定符和类型	方法和说明
+static Integer[]	doubleBitCount(double[] arr) 
+static int	doueleBitCount(double dd)
+获取一个double类型的数字的小数位有多长
+com.opslab.util.AssertUtil
+断言
+限定符和类型	方法和说明
+static void	notNull(Object object,String message)
+判断对象是否为空
+com.opslab.util.CharsetUtil
+Description: 编码相关的封装类
+限定符和类型	方法和说明
+static String	changeCharset(String str,String newCharset)
+字符串编码转换的实现方法
+static String	changeCharset(String str,String oldCharset,String newCharset)
+字符串编码转换的实现方法
+static String	digitUppercase(double n)
+数字金额大写转换 先写个完整的然后将如零拾替换成零
+static String	getDefaultCharSet() 
+static String	toASCII(String str)
+将字符编码转换成US-ASCII码
+static String	toGBK(String str)
+将字符编码转换成GBK码
+static String	toGBKWithUTF8(String input)
+Unicode转换成GBK字符集
+static String	toISO_8859_1(String str)
+将字符编码转换成ISO-8859-1码
+static String	toUnicodeWithGBK(String input)
+GBK转换成Unicode字符集
+static String	toUTF_16(String str)
+将字符编码转换成UTF-16码
+static String	toUTF_16BE(String str)
+将字符编码转换成UTF-16BE码
+static String	toUTF_16LE(String str)
+将字符编码转换成UTF-16LE码
+static String	toUTF_8(String str)
+将字符编码转换成UTF-8码
+com.opslab.util.CharUtil
+字符和字符序列常用方法
+限定符和类型	方法和说明
+static boolean	equalsOne(char c,char[] match)
+Match if one character equals to any of the given character.
+static int	findFirstDiff(char[] source,int index,char match)
+Finds index of the first character in given array the differs from thegiven set of characters.
+static int	findFirstDiff(char[] source,int index,char[] match)
+Finds index of the first character in given array the differs from thegiven set of characters.
+static int	findFirstEqual(char[] source, int index, char match)
+Finds index of the first character in given array the matches any from thegiven set of characters.
+static int	findFirstEqual(char[] source, int index, char[] match)
+Finds index of the first character in given array the matches any from thegiven set of characters.
+static boolean	isAlpha(char c)
+Indicates whether the given character is in the ALPHA set.
+static boolean	isAlphaOrDigit(char c) 
+static boolean	isDigit(char c)
+Indicates whether the given character is in the DIGIT set.
+static boolean	isGenericDelimiter(int c)
+Indicates whether the given character is in the gen-delims set.
+static boolean	isHexDigit(char c)
+Indicates whether the given character is the hexadecimal digit.
+static boolean	isLowercaseAlpha(char c)
+Returns true if specified character is lowercase ASCII.
+static boolean	isPchar(char c)
+Indicates whether the given character is in the pchar set.
+static boolean	isPropertyNameChar(char c) 
+static boolean	isReserved(char c)
+Indicates whether the given character is in the reserved set.
+static boolean	isSubDelimiter(int c)
+Indicates whether the given character is in the sub-delims set.
+static boolean	isUnreserved(char c)
+Indicates whether the given character is in the unreserved set.
+static boolean	isUppercaseAlpha(char c)
+Returns true if specified character is uppercase ASCII.
+static boolean	isWhitespace(char c)
+Returns true if character is a white space (<= ' ').
+static boolean	isWordChar(char c) 
+static int	toAscii(char c)
+Returns ASCII value of a char.
+static byte[]	toAsciiByteArray(char[] carr)
+Converts char array into ASCII array.
+static byte[]	toAsciiByteArray(java.lang.CharSequence charSequence)
+Converts char sequence into ASCII byte array.
+static byte[]	toByteArray(char[] carr)
+Converts char array to byte array using default Jodd encoding.
+static byte[]	toByteArray(char[] carr,String charset)
+Converts char array to byte array using provided encoding.
+static char	toChar(byte b)
+Converts (signed) byte to (unsigned) char.
+static char[]	toCharArray(byte[] barr)
+Converts byte array of default Jodd encoding to char array.
+static char[]	toCharArray(byte[] barr,String charset)
+Converts byte array of specific encoding to char array.
+static char	toLowerAscii(char c)
+Lowers uppercase ASCII char.
+static byte[]	toRawByteArray(char[] carr)
+Converts char array into byte array by replacing each character with two bytes.
+static char[]	toRawCharArray(byte[] barr) 
+static byte[]	toSimpleByteArray(char[] carr)
+Converts char array into byte array by stripping the high byte of each character.
+static byte[]	toSimpleByteArray(java.lang.CharSequence charSequence)
+Converts char sequence into byte array.
+static char[]	toSimpleCharArray(byte[] barr)
+Converts byte array to char array by simply extending bytes to chars.
+static char	toUpperAscii(char c)
+Uppers lowercase ASCII char.
+com.opslab.util.CheckUtil
+提供一些对象有效性校验的方法
+限定符和类型	方法和说明
+static boolean	isDate(String date, String format)
+判断字符串是否是符合指定格式的时间
+static boolean	valid(java.util.Collection... cols)
+判断一组集合是否有效
+static boolean	valid(java.util.Collection col)
+判断集合的有效性
+static boolean	valid(Map... maps)
+判断一组map是否有效
+static boolean	valid(Map map)
+判断map是否有效
+static boolean	valid(Object obj)
+判断一个对象是否为空
+static boolean	valid(Object[] objs)
+判断一组对象是否有效
+static boolean	valid(String src)
+判断字符串有效性
+static boolean	valid(String[] src)
+判断一组字符串是否有效
+com.opslab.util.ConfigUtil
+配置相关的一些辅助类
+限定符和类型	方法和说明
+static java.net.URL	findAsResource(String path)
+获取配置文件资源
+static java.util.Properties	getConfigProperties(String path)
+获取资源属性
+static String	resourcePath(String path) 
+com.opslab.util.ExceptionUtil
+异常处理的工具类
+限定符和类型	方法和说明
+static String	stackTraceToString(java.lang.Throwable e)
+获取异常信息
+static String	stackTraceToString(java.lang.Throwable e, String packageName)
+只返回指定包中的异常堆栈信息
+com.opslab.util.FileUtil
+封装了些文件相关的操作
+限定符和类型	字段和说明
+static java.security.MessageDigest	MD5 
+限定符和类型	方法和说明
+static boolean	appendLine(File file, String str)
+在文件末尾追加一行
+static boolean	appendLine(File file, String str, String encoding)
+在文件末尾追加一行
+static boolean	cleanFile(File file)
+快速清空一个超大的文件
+static boolean	copy(File file, String targetFile)
+复制文件通过该方式复制文件文件越大速度越是明显
+static boolean	copy(String resourcePath, String targetPath)
+复制文件
+static void	copyDir(File filePath,String targetPath)
+复制目录
+static void	copyDir(String filePath,String targetPath)
+复制目录
+static int	countLines(File file)
+获取文件的行数
+static boolean	createFiles(String filePath)
+创建文件支持多级目录
+static boolean	createPaths(String paths)
+创建多级目录
+static boolean	deleteBigFile(File file)
+快速的删除超大的文件
+static boolean	deleteDir(File file)
+删除一个目录
+static boolean	deleteFile(File file)
+删除一个文件
+static String	fileMD5(File file)
+获取文件的md5
+static String	fileType(File file)
+获取文件的类型 只利用文件头做判断故不全
+static List<String>	lines(File file)
+以列表的方式获取文件的所有行
+static List<String>	lines(File file,int lines)
+以列表的方式获取文件的指定的行数数据
+static List<String>	lines(File file,int lines,String encoding)
+以列表的方式获取文件的指定的行数数据
+static List<String>	lines(File file,String encoding)
+以列表的方式获取文件的所有行
+static List<File>	listFile(File path)
+罗列指定路径下的全部文件
+static List<File>	listFile(File path, boolean child)
+罗列指定路径下的全部文件
+static List<File>	listFile(String path)
+罗列指定路径下的全部文件
+static List<File>	listFile(String path, boolean child)
+罗列指定路径下的全部文件
+static List<File>	listFileAll(File path)
+罗列指定路径下的全部文件包括文件夹
+static List<File>	listFileFilter(File path, FilenameFilter filter)
+罗列指定路径下的全部文件包括文件夹
+static List<File>	listFileFilter(File dirPath, String postfixs)
+获取指定目录下的特点文件,通过后缀名过滤
+static String	mimeType(String file)
+获取文件的Mime类型
+static Date	modifyTime(File file)
+获取文件最后的修改时间
+static List<File>	searchFile(File dirPath, String fileName)
+在指定的目录下搜寻文个文件
+static List<File>	searchFileReg(File dirPath,String reg)
+查找符合正则表达式reg的的文件
+static String	suffix(File file)
+获取文件后缀名
+static boolean	write(File file,String str)
+将字符串写入到文件中
+static boolean	write(File file,String str,String encoding)
+将字符串以制定的编码写入到文件中
+static boolean	writeAppend(File file,String str)
+将字符串以追加的方式写入到文件中
+static boolean	writeAppend(File file,String str,String encoding)
+将字符串以追加的方式以制定的编码写入到文件中
+com.opslab.util.JacksonUtil
+基于Jackson的JSON工具
+限定符和类型	方法和说明
+static <T> T	JsonToBean(String jsonStr, java.lang.Class<T> objClass) 
+static String	toJson(Object obj)
+对象转换成JSON
+static <T> T	toObject(String json, java.lang.Class<T> clazz)
+将 JSON 字符串转化为 Java 对象
+com.opslab.util.PropertiesUtil
+提供一些常用的属性文件相关的方法
+限定符和类型	字段和说明
+static org.slf4j.Logger	logger 
+限定符和类型	方法和说明
+static Map<String,String>	GetAllProperties(String filePath)
+读取Properties的全部信息
+static String	GetValueByKey(String filePath,String key)
+根据Key读取Value
+static String	key(String key)
+从系统属性文件中获取相应的值
+static Map<String,String>	properties(InputStream in) 
+static void	WriteProperties(String filePath,String pKey,String pValue)
+写入Properties信息
+com.opslab.util.StreamUtil
+流相关的操作方法封装
+限定符和类型	方法和说明
+static InputStream	byte2InputStream(byte[] b)
+byte 转为 InputStream
+static byte[]	inputStream2Byte(InputStream inStream)
+InputStream 转为 byte
+static byte[]	stream2Byte(InputStream is)
+Read an input stream into a byte[]
+static void	streamSaveAsFile(InputStream is, File outfile)
+将流另存为文件
+static String	streamToString(InputStream in)
+Read an input stream into a string
+com.opslab.util.StringUtil
+提供些常用的字符串相关的工具方法
+限定符和类型	方法和说明
+static int	countSubStr(String string,String str)
+获取字符串str在String中出现的次数
+static String	formatDouble(double f, String format)
+格式化一个float
+static String	full2Half(String str)
+全角字符变半角字符
+static String	getHideEmailPrefix(String email)
+隐藏邮件地址前缀。
+static String	Half2Full(String str)
+半角字符变全角字符
+static boolean	isEmpty(String str)
+判断是否是空字符串 null和""都返回 true
+static boolean	isIn(String substring, String[] source)
+判断字符串数组中是否包含某字符串元素
+static String	join(String linkStr, String... strs)
+将一组字符才以指定的字符链接起来
+static String	joinString(List list, String symbol)
+把string array or list用给定的符号symbol连接成一个字符串
+static String	joinString(String[] array, String symbol)
+把string array or list用给定的符号symbol连接成一个字符串
+static String	left(String input, int count)
+截取字符串左侧指定长度的字符串
+static boolean	leftEquals(String str1, String str2, int length)
+判读俩个字符串左侧的length个字符串是否一样
+static String	lowerFirstChar(String str)
+将字符串首字母转小写
+static String	ltrim(String str1,int num)
+截取字符串左侧的Num位截取到末尾
+static List<String>	parseString2List(String src, String pattern)
+根据指定的字符把源字符串分割成一个list
+static String	remove(String s, String sub)
+删除所有的子串Removes all substring occurrences from the string.
+static String	repeat(String src, int num)
+repeat - 通过源字符串重复生成N次组成新的字符串。
+static String	replaceBlank(String str)
+页面中去除字符串中的空格、回车、换行符、制表符
+static String	replaceFirst(String s, String sub, String with)
+替换一个出现的子串
+static String	replaceLast(String s,String sub,String with)
+替换最后一次出现的字串Replaces the very last occurrence of a substring with supplied string.
+static boolean	requals(String str1,String str2)
+判定第一个字符串是否等于的第二个字符串中的某一个值
+static boolean	requals(String str1,String str2,String split)
+判定第一个字符串是否等于的第二个字符串中的某一个值
+static String	right(String input,int count)
+截取字符串右侧指定长度的字符串
+static boolean	rigthEquals(String str1,String str2,int length)
+判读俩个字符串右侧的length个字符串是否一样
+static String	rtrim(String str,int num)
+截取字符串右侧第0位到第Num位
+static double	SimilarDegree(String str1,String str2)
+字符串相似度比较(速度较快)
+static double	SimilarityRatio(String str1,String str2)
+字符串相似度比较(速度较快)
+static String	string2Unicode(String string)
+字符串转换unicode.实现native2ascii.exe类似的功能
+static String	subStringOmit(String subject,int size)
+字符串省略截取字符串截取到指定长度size+...的形式
+static String	subStringSymbol(String str,int len,String symbol)
+截取字符串　超出的字符用symbol代替
+static String	trimPunct(String str)
+删除所有的标点符号
+static String	unicode2String(String unicode)
+转字符串 实现native2ascii.exe类似的功能
+static String	upperFirstChar(String str)
+将字符串首字母转大写
+com.opslab.util.ZIPUtil
+压缩文档相关的工具类
+限定符和类型	方法和说明
+static void	deCompress(File file, String dest)
+文档压缩
+static void	unCompress(File source, String path)
+文档解压
+static void	zipFile(File inFile,java.util.zip.ZipOutputStream zos,String dir) 
+com.opslab.util.algorithmImpl.BCConvert
+提供对字符串的全角->半角，半角->全角转换
+限定符和类型	方法和说明
+static String	bj2qj(String src)
+半角字符->全角字符转换只处理空格，!
+static String	qj2bj(String src)
+全角字符->半角字符转换只处理全角的空格，全角！
+com.opslab.util.algorithmImpl.BeanFactory
+提供一些BeanUti需要的方法
+限定符和类型	字段和说明
+static Map<String,Map<String,BeanStruct>>	BEAN_SIMPLE_PROPERTIES
+存放BeanUtil解析过的JavaBean数据只获取简单的属性字段
+static Map<String,Map<String,BeanStruct>>	BEAN_SIMPLE_PROPERTIESIGNORE
+存放BeanUtil解析过的JavaBean数据只获取简单的属性字段(忽略字段名字的大小写)
+限定符和类型	方法和说明
+static void	add(java.lang.Class clazz) 
+static void	add(Object obj)
+将JavaBean进行解析并存在在static变量中
+static boolean	isDeclaredField(String className,String pro) 
+com.opslab.util.algorithmImpl.FileEncodingUtil
+文件编码相关的一些工具函数
+限定符和类型	方法和说明
+static void	convert(File file,String fromCharsetName,String toCharsetName)
+把指定文件或目录转换成指定的编码
+static void	convert(File file,String fromCharsetName,String toCharsetName,FilenameFilter filter)
+把指定文件或目录转换成指定的编码
+static void	convert(String fileName,String fromCharsetName,String toCharsetName)
+把指定文件或目录转换成指定的编码
+static void	convert(String fileName,String fromCharsetName,String toCharsetName,FilenameFilter filter)
+把指定文件或目录转换成指定的编码
+static String	getFileContentFromCharset(File file,String fromCharsetName)
+以指定编码方式读取文件，返回文件内容
+static void	saveFile2Charset(File file, String toCharsetName, String content)
+以指定编码方式写文本文件，存在会覆盖
+com.opslab.util.algorithmImpl.FileImpl
+文件相关的算法实现
+限定符和类型	方法和说明
+static String	guestFileEncoding(File file)
+传入一个文件(File)对象，检查文件编码
+static String	guestFileEncoding(File file,int languageHint)
+获取文件的编码
+static String	guestFileEncoding(String path)
+获取文件的编码
+static String	guestFileEncoding(String path,int languageHint)
+获取文件的编码
+com.opslab.util.algorithmImpl.FileReadImpl
+封装了集中常用的文件读的方法
+限定符和类型	方法和说明
+static void	copyFileWithBuffer(File source, File target)
+使用FileChannel+Buffer实现文件的读取拷贝是一种极佳的方案
+static void	copyFileWithChannel(File source,File target)
+利用FileChannel直接实现文件的对拷,对于大文件速度特别明显
+static void	customBufferBufferedStreamCopy(File source, File target)
+利用Buffer实现文件的读取拷贝
+static void	customBufferStreamCopy(File source, File target)
+利用Buffer实现文件的读取拷贝
+com.opslab.util.algorithmImpl.FileTypeImpl
+利用文件头来实现的一些文件类型的方法封装
+限定符和类型	字段和说明
+static Map<String,String>	FILE_TYPE_MAP 
+限定符和类型	方法和说明
+static String	getFileHexString(byte[] b)
+Created on 2010-7-1Discription:[getFileHexString]
+static String	getFileType(File file)
+Created on 2010-7-1Discription:[getFileByFile,获取文件类型,包括图片,若格式不是已配置的,则返回null]
+static String	getFileTypeByStream(byte[] b)
+Created on 2010-7-1Discription:[getFileTypeByStream]
+com.opslab.util.algorithmImpl.StringImpl
+对比俩个字符串的相似度
+限定符和类型	方法和说明
+static double	SimilarDegree(String strA,String strB)
+快速比较俩个字符串的相似度
+static double	SimilarityRatio(String str,String target)
+获取字符串的相似度
+static String	simpleEncoding(String str)
+获取字符串编码
+com.opslab.util.encrypt.ASEUtil
+ASE加密
+限定符和类型	方法和说明
+static String	AESDncode(String encodeRules,String content) 
+static String	AESEncode(String encodeRules,String content) 
+static String	decode(String secretKey, String str)
+解密字符串
+static String	encrypt(String secretKey,String Str)
+加密字符串
+com.opslab.util.encrypt.Base32
+Base32的编码和解码
+限定符和类型	方法和说明
+static String	decode(String base32)
+用Base32进行解码
+static String	encode(byte[] bytes)
+使用Base32进行编码
+com.opslab.util.encrypt.Base64
+Base64的编码和解码
+限定符和类型	方法和说明
+static byte[]	decode(byte[] arr)
+Decodes BASE64 encoded byte array.
+byte[]	decode(char[] arr)
+Decodes a BASE64 encoded char array.
+static byte[]	decode(String s)
+Decodes a BASE64 encoded string.
+static String	decodeToString(byte[] arr) 
+static String	decodeToString(String s) 
+static byte[]	encodeToByte(byte[] arr) 
+static byte[]	encodeToByte(byte[] arr, boolean lineSep)
+Encodes a raw byte array into a BASE64 char[].
+static byte[]	encodeToByte(String s) 
+static byte[]	encodeToByte(String s, boolean lineSep) 
+static char[]	encodeToChar(byte[] arr, boolean lineSeparator)
+Encodes a raw byte array into a BASE64 char[].
+static String	encodeToString(byte[] arr) 
+static String	encodeToString(byte[] arr, boolean lineSep)
+Encodes a raw byte array into a BASE64 String.
+static String	encodeToString(String s) 
+static String	encodeToString(String s, boolean lineSep) 
+com.opslab.util.encrypt.Blowfish
+Blowfish加密算法Java实现
+限定符和类型	方法和说明
+static String	decrypt(String key,byte[] tt) 
+byte[]	decryptBytes(byte[] source) 
+String	decryptString(byte[] source) 
+byte[]	encrypt(byte[] source) 
+byte[]	encrypt(byte[] source,int offset,int length) 
+byte[]	encrypt(String input) 
+static byte[]	encrypt(String key,String str) 
+void	init(boolean encrypting, byte[] key) 
+com.opslab.util.encrypt.Decode
+Blowfish加密算法Java实现
+限定符和类型	方法和说明
+static String	hexStr2Str(String hexStr)
+比较安全的字符串转换
+static String	str2HexStr(String str)
+比较安全的字符串转换
+com.opslab.util.encrypt.DESUtil
+Created by 0opslab
+限定符和类型	方法和说明
+static String	decode(String secretKey, String encryptText)
+3DES解密
+static String	encrypt(String secretKey,String plainText)
+3DES加密
+com.opslab.util.encrypt.RsaUtil
+实现RSA加密算法
+限定符和类型	字段和说明
+static String	KEY_ALGORITHM
+加密算法RSA
+static String	SIGNATURE_ALGORITHM
+签名算法
+限定符和类型	方法和说明
+static byte[]	decryptBASE64(String key)
+BASE64解密
+static byte[]	decryptByPrivateKey(byte[] encryptedData,String privateKey)
+私钥解密
+static byte[]	decryptByPublicKey(byte[] encryptedData, String publicKey)
+公钥解密
+static String	decryptDataWithPriKey(String data,String PRIVATEKEY)
+java端私钥解密
+static String	decryptDataWithPubKey(String data,String PUBLICKEY)
+java端私钥解密
+static String	encryptBASE64(byte[] key)
+BASE64加密
+static byte[]	encryptByPrivateKey(byte[] data,String privateKey)
+私钥加密
+static byte[]	encryptByPublicKey(byte[] data, String publicKey)
+公钥加密
+static String	encryptedDataWithPriKey(String data,String PRIVATEKEY)
+java端私钥加密
+static String	encryptedDataWithPubKey(String data,String PUBLICKEY)
+java端公钥加密
+static Map<String,Object>	genKeyPair()
+生成密钥对(公钥和私钥)
+static String	getPrivateKey(Map<String,Object> keyMap)
+获取私钥
+static String	getPublicKey(Map<String,Object> keyMap)
+获取公钥
+static String	sign(byte[] data, String privateKey)
+用私钥对信息生成数字签名
+static boolean	verify(byte[] data, String publicKey, String sign)
+校验数字签名
+com.opslab.util.encrypt.SecureHA
+Secure Hash Algorithm，安全散列算法
+限定符和类型	字段和说明
+static String	KEY_SHA 
+限定符和类型	方法和说明
+static String	getResult(String inputStr) 
+com.opslab.util.ftp.FileAttr
+文件属性
+限定符和类型	方法和说明
+String	getFileName() 
+Date	getModifyTime() 
+java.lang.Long	getSize() 
+void	setFileName(String fileName) 
+void	setModifyTime(Date modifyTime) 
+void	setSize(java.lang.Long size) 
+com.opslab.util.ftp.FTPConstant
+FTP相关的一些配置
+限定符和类型	字段和说明
+static Map<Integer,String>	REPLYCODE
+FTP状态码及其描述
+com.opslab.util.ftp.FTPLog
+Ftp操作日志
+限定符和类型	方法和说明
+String	getCreateTime() 
+String	getHost() 
+String	getLocalFile() 
+String	getOperation() 
+String	getRemoteFile() 
+int	getReplyCode() 
+String	getReplyCodeDesc() 
+void	setCreateTime(String createTime) 
+void	setHost(String host) 
+void	setLocalFile(String localFile) 
+void	setOperation(String operation) 
+void	setRemoteFile(String remoteFile) 
+void	setReplyCode(int replyCode) 
+void	setReplyCodeDesc(String replyCodeDesc) 
+String	toString() 
+com.opslab.util.ftp.FTPUtil
+FTP工具类
+限定符和类型	方法和说明
+boolean	changeWorkDir(String directory) 
+boolean	changName(String oldName,String newName) 
+org.apache.commons.net.ftp.FTPClient	client() 
+boolean	deleteDir(String directory) 
+boolean	deleteFile(String fileName) 
+void	destory() 
+boolean	downLoad(String fileName) 
+boolean	downLoadDir(String directory) 
+String	getWorkDir() 
+boolean	isExists(String fileName) 
+List<String>	listDir(String direcotyr) 
+List<String>	listFile(String directory) 
+Map<String,FileAttr>	listFileAttr(String directory) 
+boolean	mkDir(String destory) 
+boolean	putDir(File file, String remoteDir) 
+boolean	putDir(String fileName, String remoteDir) 
+boolean	putFile(File file,String remoteFileName,boolean isDelete) 
+boolean	putFile(String fileName,String remoteFileName,boolean isDelete) 
+com.opslab.util.ftp.FTPUtilImpl
+FTP工具类的实现
+限定符和类型	方法和说明
+boolean	changeWorkDir(String directory) 
+boolean	changName(String oldName,String newName) 
+org.apache.commons.net.ftp.FTPClient	client() 
+boolean	deleteDir(String directory) 
+boolean	deleteFile(String fileName) 
+void	destory() 
+boolean	downLoad(String fileName) 
+boolean	downLoadDir(String directory) 
+String	getWorkDir() 
+boolean	isExists(String fileName) 
+java.util.LinkedList<String>	listDir(String directory) 
+List<String>	listFile(String directory) 
+Map<String,FileAttr>	listFileAttr(String directory) 
+boolean	mkDir(String directory) 
+boolean	putDir(File file, String remoteDir) 
+boolean	putDir(String fileName, String remoteDir) 
+boolean	putFile(File file,String remoteFileName,boolean isDelete) 
+boolean	putFile(String fileName,String remoteFileName,boolean isDelete) 
+boolean	reply(String operation) 
+boolean	reply(String operation,String localFile,String remoteFile) 
+com.opslab.util.ftp.FTPVo
+用于包装FTP的相关的信息
+限定符和类型	方法和说明
+String	getHostName() 
+String	getLocalDir() 
+String	getPassword() 
+int	getPort() 
+String	getRemoteDir() 
+String	getRemoteEncoding() 
+String	getUsername() 
+boolean	isPassiveMode() 
+void	setHostName(String hostName) 
+void	setLocalDir(String localDir) 
+void	setPassiveMode(boolean passiveMode) 
+void	setPassword(String password) 
+void	setPort(int port) 
+void	setRemoteDir(String remoteDir) 
+void	setRemoteEncoding(String remoteEncoding) 
+void	setUsername(String username) 
+com.opslab.util.image.CaptchaUtil
+具体用于实现生成验证码图片的方法
+限定符和类型	方法和说明
+static boolean	gifCaptcha(String randomStr, int width, int height, String file) 
+static String	gifCaptchaBase64(String randomStr, int width, int height) 
+static int	num(int num)
+产生0--num的随机数,不包括num
+static boolean	pngCaptcha(String randomStr, int width, int height, String file)
+生成PNG的验证图片
+static String	pngCaptchaBase64(String randomStr, int width, int height)
+生成PNG的验证图片
+com.opslab.util.image.ColorUtil
+颜色相关的工具类
+限定符和类型	方法和说明
+static String	Color2String(java.awt.Color color)
+Color对象转16进制
+static java.awt.Color	String2Color(String str)
+16进制转Color对象color:RGB颜色
+com.opslab.util.image.ImageCaptcha
+生成图片验证码
+限定符和类型	字段和说明
+static String	CHAR 
+限定符和类型	方法和说明
+static String	getCHAR() 
+static int	getHeight() 
+static int	getWidth() 
+static String	gifCaptch(int strlen,String file) 
+static String	gifCaptchBase64(int strlen) 
+static String	pngCaptcha(int strlen, String file)
+生产一张png格式的验证图片在指定的位置
+static String	pngCaptchaBase64(int strlen) 
+static void	setCHAR(String CHAR) 
+static void	setHeight(int height) 
+static void	setWidth(int width) 
+com.opslab.util.image.ImageCompare
+图片比较
+限定符和类型	方法和说明
+static float	compareImage(File image1, File image2)
+比较俩个图片的相似度
+static String[][]	getPX(File file)
+改变成二进制码
+com.opslab.util.image.ImageUtil
+图片相关的操作类
+限定符和类型	方法和说明
+static java.awt.image.BufferedImage	imageMagnifyRatio(java.awt.image.BufferedImage originalImage,Integer withdRatio,Integer heightRatio)
+按照给点的比例放大图像当缩减比例小于等于0时不发生任何变化
+static java.awt.image.BufferedImage	imageResize(java.awt.image.BufferedImage originalImage,Integer width,Integer height)
+重新设定图像的长高宽
+static java.awt.image.BufferedImage	imageShrinkRatio(java.awt.image.BufferedImage originalImage, Integer withdRatio, Integer heightRatio)
+按照给点的比例缩小图像当缩减比例小于等于0时不发生任何变化
+com.opslab.util.image.OperateImage
+图片相关的操作
+限定符和类型	字段和说明
+static String	IMAGE_TYPE_BMP 
+static String	IMAGE_TYPE_GIF 
+static String	IMAGE_TYPE_JPEG 
+static String	IMAGE_TYPE_JPG 
+static String	IMAGE_TYPE_PNG 
+static String	IMAGE_TYPE_PSD 
+限定符和类型	方法和说明
+static void	alphaImage2Image(String srcImagePath, String appendImagePath, float alpha, int x, int y, int width, int height, String imageFormat, String toPath)
+在源图像上设置图片水印---- 当alpha==1时文字不透明（和在图片上直接输入文字效果一样）
+static void	alphaWords2Image(String srcImagePath, float alpha, String font, int fontStyle, int fontSize, java.awt.Color color, String inputWords, int x, int y, String imageFormat, String toPath)
+在源图片上设置水印文字
+static void	cropImage(String srcPath,String toPath,int x,int y,int width,int height,String readImageFormat,String writeImageFormat)
+对图片裁剪，并把裁剪新图片保存
+static void	drawAndAlphaPolygon(String srcImagePath,int[] xPoints,int[] yPoints,int nPoints,java.awt.Color polygonColor,float alpha,String imageFormat,String toPath)
+绘制并填充多边形
+static void	drawLine(String srcImagePath, int x1, int y1, int x2, int y2, java.awt.Color lineColor, String toPath, String imageFormat)
+画线段
+static void	drawPoint(String srcImagePath,int x,int y,int width,int height,java.awt.Color ovalColor,String imageFormat,String toPath)
+画单点 ---- 实际上是画一个填充颜色的圆---- 以指定点坐标为中心画一个小半径的圆形，并填充其颜色来充当点
+static void	drawPoints(String srcImagePath, List pointList, int width, int height, java.awt.Color ovalColor, String imageFormat, String toPath)
+画一组（多个）点---- 实际上是画一组（多个）填充颜色的圆---- 以指定点坐标为中心画一个小半径的圆形，并填充其颜色来充当点
+static void	drawPolygon(String srcImagePath,int[] xPoints,int[] yPoints,int nPoints,java.awt.Color polygonColor,String imageFormat,String toPath)
+绘制一个由 x 和 y 坐标数组定义的闭合多边形
+static void	drawPolyline(String srcImagePath, int[] xPoints, int[] yPoints, int nPoints, java.awt.Color lineColor, String toPath, String imageFormat)
+画折线 / 线段---- 2个点即画线段，多个点画折线
+static void	drawPolylineShowPoints(String srcImagePath, int[] xPoints, int[] yPoints, int nPoints, java.awt.Color lineColor, int width, int height, java.awt.Color ovalColor, String toPath, String imageFormat)
+绘制折线，并突出显示转折点
+static void	enlargementImageByRatio(String srcImagePath,String toImagePath,int widthRatio,int heightRatio)
+按倍率放大图片
+static void	enlargementImageEqualProportion(String srcImagePath,String toImagePath,int ratio)
+长高等比例放大图片
+static void	grayImage(String srcImage,String toPath,String imageFormat)
+图片灰化操作
+static boolean	joinImageListHorizontal(String[] pics,String type,String dst_pic)
+横向拼接一组（多张）图像
+static boolean	joinImageListVertical(String[] pics,String type,String dst_pic)
+纵向拼接一组（多张）图像
+static void	joinImagesHorizontal(String firstSrcImagePath, String secondSrcImagePath, String imageFormat, String toPath)
+横向拼接图片（两张）
+static void	joinImagesVertical(String firstSrcImagePath, String secondSrcImagePath, String imageFormat, String toPath)
+纵向拼接图片（两张）
+static void	mergeBothImage(String negativeImagePath, String additionImagePath, String iamgeFromat, int x, int y, String toPath)
+合并图片(按指定初始x、y坐标将附加图片贴到底图之上)
+static void	mergeImageList(String negativeImagePath, List additionImageList, String imageFormat, String toPath)
+将一组图片一次性附加合并到底图上
+static void	reduceImageByRatio(String srcImagePath, String toImagePath, int widthRatio, int heightRatio)
+按倍率缩小图片
+static void	reduceImageEqualProportion(String srcImagePath, String toImagePath, int ratio)
+长高等比例缩小图片
+static void	resizeImage(String srcImagePath,String toImagePath,int width,int height)
+重置图形的边长大小
+com.opslab.util.map.CoordinateUtil
+经纬度相关的阿一些操作
+限定符和类型	方法和说明
+static double	distance(double long1, double lat1, double long2, double lat2)
+计算地球上任意两点(经纬度)距离
+com.opslab.util.web.URIPart
+Enumeration to identify the parts of a URI.Contains methods to indicate whether a given character is valid in a specific URI component.
+限定符和类型	方法和说明
+abstract boolean	isValid(char c)
+Indicates whether the given character is allowed in this URI component.
+static URIPart	valueOf(String name)
+返回带有指定名称的该类型的枚举常量。
+static URIPart[]	values()
+按照声明该枚举类型的常量的顺序, 返回 包含这些常量的数组。
